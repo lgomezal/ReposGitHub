@@ -11,8 +11,23 @@
 		BA29DCD221C38F95006C8D73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCD121C38F95006C8D73 /* AppDelegate.swift */; };
 		BA29DCD921C38F96006C8D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA29DCD821C38F96006C8D73 /* Assets.xcassets */; };
 		BA29DCDC21C38F96006C8D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29DCDA21C38F96006C8D73 /* LaunchScreen.storyboard */; };
-		BA29DCE721C38F97006C8D73 /* ReposGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCE621C38F97006C8D73 /* ReposGitHubTests.swift */; };
+		BA29DCE721C38F97006C8D73 /* RepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCE621C38F97006C8D73 /* RepositoryTest.swift */; };
 		BA29DCF221C3900A006C8D73 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BA29DCF121C3900A006C8D73 /* Podfile */; };
+		BA29DCF821C3C440006C8D73 /* RGHRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCF721C3C440006C8D73 /* RGHRepository.swift */; };
+		BA29DCFA21C3C489006C8D73 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCF921C3C489006C8D73 /* Typealias.swift */; };
+		BA29DCFC21C3D592006C8D73 /* RGHRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCFB21C3D592006C8D73 /* RGHRepositories.swift */; };
+		BA29DCFF21C40DB4006C8D73 /* RGHRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCFD21C40DB4006C8D73 /* RGHRepositoriesViewController.swift */; };
+		BA29DD0021C40DB4006C8D73 /* RGHRepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA29DCFE21C40DB4006C8D73 /* RGHRepositoriesViewController.xib */; };
+		BA29DD0521C40FCB006C8D73 /* UIviewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD0421C40FCB006C8D73 /* UIviewController+Additions.swift */; };
+		BA29DD0821C41441006C8D73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD0721C41441006C8D73 /* Constants.swift */; };
+		BA29DD0B21C416F2006C8D73 /* RGHExecuteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD0A21C416F2006C8D73 /* RGHExecuteInteractor.swift */; };
+		BA29DD0D21C41708006C8D73 /* RGHExecuteInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD0C21C41708006C8D73 /* RGHExecuteInteractorImpl.swift */; };
+		BA29DD1021C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD0F21C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift */; };
+		BA29DD1221C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD1121C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift */; };
+		BA29DD1721C42CB5006C8D73 /* RGHJSONParserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD1621C42CB5006C8D73 /* RGHJSONParserRepository.swift */; };
+		BA29DD1A21C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD1821C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift */; };
+		BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */; };
+		BA9F5DE421C46D8100C85A0E /* RGHRepositoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +50,25 @@
 		BA29DCDB21C38F96006C8D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA29DCDD21C38F96006C8D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA29DCE221C38F97006C8D73 /* ReposGitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReposGitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA29DCE621C38F97006C8D73 /* ReposGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposGitHubTests.swift; sourceTree = "<group>"; };
+		BA29DCE621C38F97006C8D73 /* RepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTest.swift; sourceTree = "<group>"; };
 		BA29DCE821C38F97006C8D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA29DCF121C3900A006C8D73 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BA29DCF121C3900A006C8D73 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA29DCF721C3C440006C8D73 /* RGHRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHRepository.swift; sourceTree = "<group>"; };
+		BA29DCF921C3C489006C8D73 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		BA29DCFB21C3D592006C8D73 /* RGHRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHRepositories.swift; sourceTree = "<group>"; };
+		BA29DCFD21C40DB4006C8D73 /* RGHRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHRepositoriesViewController.swift; sourceTree = "<group>"; };
+		BA29DCFE21C40DB4006C8D73 /* RGHRepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHRepositoriesViewController.xib; sourceTree = "<group>"; };
+		BA29DD0421C40FCB006C8D73 /* UIviewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIviewController+Additions.swift"; sourceTree = "<group>"; };
+		BA29DD0721C41441006C8D73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA29DD0A21C416F2006C8D73 /* RGHExecuteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHExecuteInteractor.swift; sourceTree = "<group>"; };
+		BA29DD0C21C41708006C8D73 /* RGHExecuteInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHExecuteInteractorImpl.swift; sourceTree = "<group>"; };
+		BA29DD0F21C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadRepositoriesInteractor.swift; sourceTree = "<group>"; };
+		BA29DD1121C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadRepositoriesInteractorAlamofireImpl.swift; sourceTree = "<group>"; };
+		BA29DD1621C42CB5006C8D73 /* RGHJSONParserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHJSONParserRepository.swift; sourceTree = "<group>"; };
+		BA29DD1821C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHrepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHRepositoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		BA9F5DE021C4462000C85A0E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHRepositoriesViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +93,7 @@
 		311C75F8FC0F9D777E8E56CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA9F5DE021C4462000C85A0E /* Alamofire.framework */,
 				88EEAA8977FE292D36963045 /* Pods_ReposGitHub.framework */,
 			);
 			name = Frameworks;
@@ -100,10 +132,13 @@
 		BA29DCD021C38F95006C8D73 /* ReposGitHub */ = {
 			isa = PBXGroup;
 			children = (
+				BA29DCD121C38F95006C8D73 /* AppDelegate.swift */,
 				BA29DCF321C39116006C8D73 /* Model */,
 				BA29DCF421C3911D006C8D73 /* View */,
 				BA29DCF521C39125006C8D73 /* Controller */,
-				BA29DCD121C38F95006C8D73 /* AppDelegate.swift */,
+				BA29DD0921C416AD006C8D73 /* Interactors */,
+				BA29DCF621C3C1AF006C8D73 /* Commons */,
+				BA29DD0321C40FA0006C8D73 /* Extensions */,
 				BA29DCD821C38F96006C8D73 /* Assets.xcassets */,
 				BA29DCDA21C38F96006C8D73 /* LaunchScreen.storyboard */,
 				BA29DCDD21C38F96006C8D73 /* Info.plist */,
@@ -114,7 +149,7 @@
 		BA29DCE521C38F97006C8D73 /* ReposGitHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA29DCE621C38F97006C8D73 /* ReposGitHubTests.swift */,
+				BA29DCE621C38F97006C8D73 /* RepositoryTest.swift */,
 				BA29DCE821C38F97006C8D73 /* Info.plist */,
 			);
 			path = ReposGitHubTests;
@@ -123,6 +158,7 @@
 		BA29DCF321C39116006C8D73 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA29DD0621C410C3006C8D73 /* Repositories */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +166,7 @@
 		BA29DCF421C3911D006C8D73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA29DD0121C40F40006C8D73 /* Repositories */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,8 +174,82 @@
 		BA29DCF521C39125006C8D73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA29DD0221C40F52006C8D73 /* Repositories */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA29DCF621C3C1AF006C8D73 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DCF921C3C489006C8D73 /* Typealias.swift */,
+				BA29DD0721C41441006C8D73 /* Constants.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		BA29DD0121C40F40006C8D73 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DCFE21C40DB4006C8D73 /* RGHRepositoriesViewController.xib */,
+				BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BA29DD0221C40F52006C8D73 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DCFD21C40DB4006C8D73 /* RGHRepositoriesViewController.swift */,
+				BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */,
+				BA29DD1821C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BA29DD0321C40FA0006C8D73 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DD0421C40FCB006C8D73 /* UIviewController+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA29DD0621C410C3006C8D73 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DD1521C42C88006C8D73 /* JSONParser */,
+				BA29DCF721C3C440006C8D73 /* RGHRepository.swift */,
+				BA29DCFB21C3D592006C8D73 /* RGHRepositories.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BA29DD0921C416AD006C8D73 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DD0A21C416F2006C8D73 /* RGHExecuteInteractor.swift */,
+				BA29DD0C21C41708006C8D73 /* RGHExecuteInteractorImpl.swift */,
+				BA29DD0E21C41859006C8D73 /* Repositories */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		BA29DD0E21C41859006C8D73 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DD0F21C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift */,
+				BA29DD1121C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BA29DD1521C42C88006C8D73 /* JSONParser */ = {
+			isa = PBXGroup;
+			children = (
+				BA29DD1621C42CB5006C8D73 /* RGHJSONParserRepository.swift */,
+			);
+			path = JSONParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +337,8 @@
 			files = (
 				BA29DCDC21C38F96006C8D73 /* LaunchScreen.storyboard in Resources */,
 				BA29DCD921C38F96006C8D73 /* Assets.xcassets in Resources */,
+				BA29DD0021C40DB4006C8D73 /* RGHRepositoriesViewController.xib in Resources */,
+				BA9F5DE421C46D8100C85A0E /* RGHRepositoryCollectionViewCell.xib in Resources */,
 				BA29DCF221C3900A006C8D73 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,10 +379,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,7 +398,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA29DD0521C40FCB006C8D73 /* UIviewController+Additions.swift in Sources */,
+				BA29DD1221C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift in Sources */,
+				BA29DD0D21C41708006C8D73 /* RGHExecuteInteractorImpl.swift in Sources */,
 				BA29DCD221C38F95006C8D73 /* AppDelegate.swift in Sources */,
+				BA29DD1721C42CB5006C8D73 /* RGHJSONParserRepository.swift in Sources */,
+				BA29DCFF21C40DB4006C8D73 /* RGHRepositoriesViewController.swift in Sources */,
+				BA29DCFC21C3D592006C8D73 /* RGHRepositories.swift in Sources */,
+				BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */,
+				BA29DD0B21C416F2006C8D73 /* RGHExecuteInteractor.swift in Sources */,
+				BA29DD1021C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift in Sources */,
+				BA29DD0821C41441006C8D73 /* Constants.swift in Sources */,
+				BA29DCFA21C3C489006C8D73 /* Typealias.swift in Sources */,
+				BA29DD1A21C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift in Sources */,
+				BA29DCF821C3C440006C8D73 /* RGHRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA29DCE721C38F97006C8D73 /* ReposGitHubTests.swift in Sources */,
+				BA29DCE721C38F97006C8D73 /* RepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +569,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VJ3XGT65D5;
 				INFOPLIST_FILE = ReposGitHub/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codigohifi.ReposGitHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -457,7 +588,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VJ3XGT65D5;
 				INFOPLIST_FILE = ReposGitHub/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codigohifi.ReposGitHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -473,7 +607,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VJ3XGT65D5;
 				INFOPLIST_FILE = ReposGitHubTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codigohifi.ReposGitHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -490,7 +628,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VJ3XGT65D5;
 				INFOPLIST_FILE = ReposGitHubTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codigohifi.ReposGitHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
