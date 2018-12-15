@@ -63,7 +63,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="update" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="F4j-KN-fut">
-                        <rect key="frame" x="5" y="198.5" width="374" height="23.5"/>
+                        <rect key="frame" x="5" y="221.5" width="374" height="23.5"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -76,6 +76,7 @@
                 <constraint firstItem="1uw-dn-tN0" firstAttribute="centerY" secondItem="kYc-Br-jWW" secondAttribute="centerY" id="6n9-OT-Kha"/>
                 <constraint firstItem="kYc-Br-jWW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="EVu-o6-Wno"/>
                 <constraint firstAttribute="trailing" secondItem="ZxT-r1-AnL" secondAttribute="trailing" constant="5" id="FWY-EY-X6d"/>
+                <constraint firstAttribute="bottom" secondItem="F4j-KN-fut" secondAttribute="bottom" constant="5" id="HPE-3R-MyX"/>
                 <constraint firstItem="kYc-Br-jWW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Scx-d9-Mfl"/>
                 <constraint firstItem="YfH-kD-D1P" firstAttribute="top" secondItem="kYc-Br-jWW" secondAttribute="bottom" constant="10" id="cw4-uc-35Y"/>
                 <constraint firstAttribute="trailing" secondItem="F4j-KN-fut" secondAttribute="trailing" constant="5" id="dAf-UA-jz0"/>
@@ -83,7 +84,6 @@
                 <constraint firstItem="hyV-tD-5iD" firstAttribute="top" secondItem="ZxT-r1-AnL" secondAttribute="bottom" constant="10" id="ulT-I2-0Ng"/>
                 <constraint firstItem="ZxT-r1-AnL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="v7N-a4-pC8"/>
                 <constraint firstItem="1uw-dn-tN0" firstAttribute="leading" secondItem="kYc-Br-jWW" secondAttribute="trailing" constant="10" id="wNW-88-xwK"/>
-                <constraint firstItem="F4j-KN-fut" firstAttribute="top" secondItem="hyV-tD-5iD" secondAttribute="bottom" constant="5" id="yrC-2p-VI9"/>
                 <constraint firstAttribute="trailing" secondItem="1uw-dn-tN0" secondAttribute="trailing" constant="5" id="zQZ-bq-H96"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

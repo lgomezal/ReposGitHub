@@ -10,8 +10,18 @@ import UIKit
 
 let activityIndicator = UIActivityIndicatorView(style: .gray)
 var nextPage: String = "1"
+var queryText: String = ""
 
 class RGHRepositoriesViewController: UIViewController {
+    
+    //UISearchController
+    lazy var searchController: UISearchController? = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        
+        return searchController
+    }()
     
     @IBOutlet weak var repositoriesCollectionView: UICollectionView!
     
@@ -19,6 +29,7 @@ class RGHRepositoriesViewController: UIViewController {
     
     var repositories: RGHRepositories?
     var totalRepos: RGHRepositories?
+    var hasFind: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +37,26 @@ class RGHRepositoriesViewController: UIViewController {
         //Initialize totalRepos
         totalRepos = RGHRepositories()
         
+        //Delegate
+        self.repositoriesCollectionView.delegate = self
+        self.repositoriesCollectionView.dataSource = self
+
+        //SearchController
+        navigationItem.searchController = searchController
+        searchController?.searchBar.delegate = self
+        
         //Register nibCell
         let nibCell = UINib(nibName: repositoryCollectionViewCellId, bundle: nil)
         repositoriesCollectionView.register(nibCell, forCellWithReuseIdentifier: repositoryCollectionViewCellId)
+        
+        //Download repositories
+        RGHExecuteInteractorImpl().execute {
+            repositoriesDownload(queryText: queryText, nextPageParam: nextPage)
+        }
+        
+    }
+    
+    func repositoriesDownload(queryText: String, nextPageParam: String) {
         
         //Configure activity indicator
         activityIndicator.frame = view.bounds
@@ -37,35 +65,26 @@ class RGHRepositoriesViewController: UIViewController {
         activityIndicator.startAnimating()
         view.addSubview(activityIndicator)
         
-        //Download repositories
-        RGHExecuteInteractorImpl().execute {
-            repositoriesDownload(nextPageParam: nextPage)
-        }
-        
-    }
-    
-    func repositoriesDownload(nextPageParam: String) {
-        
         let downloadRepositoriesInteractor: RGHDownloadRepositoriesInteractor = RGHDownloadRepositoriesInteractorAlamofireImpl()
         
-        downloadRepositoriesInteractor.execute(nextPageParam: nextPage) { (repositories: RGHRepositories?) in
+        downloadRepositoriesInteractor.execute(queryText: queryText, nextPageParam: nextPage) { (repositories: RGHRepositories?) in
             
             // OK, load repositories in collectionView
             self.repositories = repositories
             // Add repositories to TotalRepos
             if let repoCount = self.repositories?.count() {
+                //Initialize totalRepos if parameters empty
+                if queryText == "" && nextPageParam == "" && self.hasFind == true {
+                    self.totalRepos = RGHRepositories()
+                    self.hasFind = false
+                }
                 for i in 0..<repoCount {
                     let repository: RGHRepository = ((self.repositories?.get(index: i))!)
                     self.totalRepos?.add(repository: repository)
                 }
+                self.repositoriesCollectionView.collectionViewLayout.invalidateLayout()
+                self.repositoriesCollectionView.reloadData()
             }
-            
-            
-            self.repositoriesCollectionView.collectionViewLayout.invalidateLayout()
-            self.repositoriesCollectionView.delegate = self
-            self.repositoriesCollectionView.dataSource = self
-            self.repositoriesCollectionView.reloadData()
-            
         }
     }
 }

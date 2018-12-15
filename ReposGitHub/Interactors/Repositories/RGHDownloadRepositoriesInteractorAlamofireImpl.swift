@@ -10,15 +10,25 @@ import Alamofire
 
 class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInteractor {
     
-    func execute(nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void, onError: errorClosure) {
-        
+    var parameters: [String:Any] = [:]
+    
+    func execute(queryText: String, nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void, onError: errorClosure) {
         //Parameters for url
-        let parameters: [String:Any] = [
-            "q":"is:public",
-            "sort":"start",
-            "order":"desc",
-            "page":"\(nextPageParam)",
-            "per_page":"100"]
+        if queryText == "" {
+            parameters = [
+                "q":"is:public",
+                "sort":"start",
+                "order":"desc",
+                "page":"\(nextPageParam)",
+                "per_page":"100"]
+        } else {
+            parameters = [
+                "q":"\(queryText) in:name is:public",
+                "sort":"start",
+                "order":"desc",
+                "page":"\(nextPageParam)",
+                "per_page":"100"]
+        }
         
         //Call GitHub API
         Alamofire.request(Constants.urlHost + Constants.urlLoginPath, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).validate().responseData { (response) in
@@ -39,8 +49,8 @@ class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInt
         }
     }
     
-    func execute(nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void) {
-        execute(nextPageParam: nextPageParam, onSuccess: onSuccess, onError: nil)
+    func execute(queryText: String, nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void) {
+        execute(queryText: queryText, nextPageParam: nextPageParam, onSuccess: onSuccess, onError: nil)
     }
     
     func extractLink(linkHeader: String) -> String {

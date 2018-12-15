@@ -28,6 +28,7 @@
 		BA29DD1A21C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD1821C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift */; };
 		BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */; };
 		BA9F5DE421C46D8100C85A0E /* RGHRepositoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */; };
+		BACD17E221C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHRepositoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA9F5DE021C4462000C85A0E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHRepositoriesViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
+		BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHRepositoriesViewController+SearchController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				BA29DCFD21C40DB4006C8D73 /* RGHRepositoriesViewController.swift */,
 				BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */,
+				BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */,
 				BA29DD1821C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift */,
 			);
 			path = Repositories;
@@ -407,6 +410,7 @@
 				BA29DCFC21C3D592006C8D73 /* RGHRepositories.swift in Sources */,
 				BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */,
 				BA29DD0B21C416F2006C8D73 /* RGHExecuteInteractor.swift in Sources */,
+				BACD17E221C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift in Sources */,
 				BA29DD1021C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift in Sources */,
 				BA29DD0821C41441006C8D73 /* Constants.swift in Sources */,
 				BA29DCFA21C3C489006C8D73 /* Typealias.swift in Sources */,

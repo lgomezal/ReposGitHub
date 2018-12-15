@@ -48,7 +48,7 @@ extension RGHRepositoriesViewController: UICollectionViewDelegate, UICollectionV
                 if nextPage != "" {
                     //Download repositories
                     RGHExecuteInteractorImpl().execute {
-                        repositoriesDownload(nextPageParam: nextPage)
+                        repositoriesDownload(queryText: queryText, nextPageParam: nextPage)
                     }
                 }
             }
