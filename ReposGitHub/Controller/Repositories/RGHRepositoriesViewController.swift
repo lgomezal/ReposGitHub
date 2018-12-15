@@ -9,6 +9,7 @@
 import UIKit
 
 let activityIndicator = UIActivityIndicatorView(style: .gray)
+var nextPage: String = "1"
 
 class RGHRepositoriesViewController: UIViewController {
     
@@ -17,44 +18,54 @@ class RGHRepositoriesViewController: UIViewController {
     let repositoryCollectionViewCellId = Constants.repositoryCVCId
     
     var repositories: RGHRepositories?
+    var totalRepos: RGHRepositories?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Initialize totalRepos
+        totalRepos = RGHRepositories()
+        
         //Register nibCell
         let nibCell = UINib(nibName: repositoryCollectionViewCellId, bundle: nil)
         repositoriesCollectionView.register(nibCell, forCellWithReuseIdentifier: repositoryCollectionViewCellId)
         
         //Configure activity indicator
-        view.addSubview(activityIndicator)
         activityIndicator.frame = view.bounds
         activityIndicator.style = .gray
+        activityIndicator.center = self.view.center
         activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
         
         //Download repositories
         RGHExecuteInteractorImpl().execute {
-            repositoriesDownload()
-        }
-        
-        func repositoriesDownload() {
-            
-            let downloadRepositoriesInteractor: RGHDownloadRepositoriesInteractor = RGHDownloadRepositoriesInteractorAlamofireImpl()
-            
-            downloadRepositoriesInteractor.execute() { (repositories: RGHRepositories?) in
-                
-                // OK, load repositories in collectionView
-                self.repositories = repositories
-                
-                self.repositoriesCollectionView.collectionViewLayout.invalidateLayout()
-                self.repositoriesCollectionView.delegate = self
-                self.repositoriesCollectionView.dataSource = self
-                self.repositoriesCollectionView.reloadData()
-                
-            }
+            repositoriesDownload(nextPageParam: nextPage)
         }
         
     }
-
-
-
+    
+    func repositoriesDownload(nextPageParam: String) {
+        
+        let downloadRepositoriesInteractor: RGHDownloadRepositoriesInteractor = RGHDownloadRepositoriesInteractorAlamofireImpl()
+        
+        downloadRepositoriesInteractor.execute(nextPageParam: nextPage) { (repositories: RGHRepositories?) in
+            
+            // OK, load repositories in collectionView
+            self.repositories = repositories
+            // Add repositories to TotalRepos
+            if let repoCount = self.repositories?.count() {
+                for i in 0..<repoCount {
+                    let repository: RGHRepository = ((self.repositories?.get(index: i))!)
+                    self.totalRepos?.add(repository: repository)
+                }
+            }
+            
+            
+            self.repositoriesCollectionView.collectionViewLayout.invalidateLayout()
+            self.repositoriesCollectionView.delegate = self
+            self.repositoriesCollectionView.dataSource = self
+            self.repositoriesCollectionView.reloadData()
+            
+        }
+    }
 }

@@ -22,6 +22,10 @@ class RGHRepositoryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //Ajust constraints of imageview
+        self.avatarImage.heightAnchor.constraint(equalToConstant: (75 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
+        self.avatarImage.widthAnchor.constraint(equalToConstant: (75 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
+        //Put border to imageview
         avatarImage.layer.cornerRadius = 10
         avatarImage.clipsToBounds = true
         avatarImage.layer.borderWidth = 3

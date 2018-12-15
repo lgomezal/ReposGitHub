@@ -9,6 +9,6 @@
 import Foundation
 
 protocol RGHDownloadRepositoriesInteractor {
-    func execute(onSuccess: @escaping (RGHRepositories?) -> Void, onError: errorClosure)
-    func execute(onSuccess: @escaping (RGHRepositories?) -> Void)
+    func execute(nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void, onError: errorClosure)
+    func execute(nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void)
 }

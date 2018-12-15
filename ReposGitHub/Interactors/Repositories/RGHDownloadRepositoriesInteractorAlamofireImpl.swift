@@ -10,12 +10,24 @@ import Alamofire
 
 class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInteractor {
     
-    func execute(onSuccess: @escaping (RGHRepositories?) -> Void, onError: errorClosure) {
+    func execute(nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void, onError: errorClosure) {
+        
+        //Parameters for url
+        let parameters: [String:Any] = [
+            "q":"is:public",
+            "sort":"start",
+            "order":"desc",
+            "page":"\(nextPageParam)",
+            "per_page":"100"]
         
         //Call GitHub API
-        Alamofire.request(Constants.urlHost + Constants.urlLoginPath, method: .get, parameters: ["q":"is:public","sort":"start","order":"desc",                     "page":"1","per_page":"100"], encoding: URLEncoding.default, headers: nil).validate().responseData { (response) in
+        Alamofire.request(Constants.urlHost + Constants.urlLoginPath, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).validate().responseData { (response) in
             switch response.result {
             case .success(let data):
+                //Extract Links from response for paging
+                if let linkHeader = response.response?.allHeaderFields["Link"] as? String {
+                    nextPage = self.extractLink(linkHeader: linkHeader)
+                }
                 activityIndicator.removeFromSuperview()
                 do {
                     let repositories = RGHparseRepositories(data: data)
@@ -27,7 +39,27 @@ class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInt
         }
     }
     
-    func execute(onSuccess: @escaping (RGHRepositories?) -> Void) {
-        execute(onSuccess: onSuccess, onError: nil)
+    func execute(nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void) {
+        execute(nextPageParam: nextPageParam, onSuccess: onSuccess, onError: nil)
+    }
+    
+    func extractLink(linkHeader: String) -> String {
+        let links = linkHeader.components(separatedBy: ",")
+        
+        var dictionary: [String: String] = [:]
+        links.forEach({
+            let components = $0.components(separatedBy:"; ")
+            let cleanPath = components[0].trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
+            dictionary[components[1]] = cleanPath
+        })
+        
+        if let nextPagePath = dictionary["rel=\"next\""] {
+            print("nextPagePath: \(nextPagePath)")
+            let ampersand = nextPagePath.components(separatedBy: "&")
+            let nextPage = ampersand[1].trimmingCharacters(in: CharacterSet(charactersIn: "page="))
+            return nextPage
+        } else {
+            return ""
+        }
     }
 }

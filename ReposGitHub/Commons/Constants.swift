@@ -16,12 +16,3 @@ struct Constants {
     static let repositoryCVCId = "RGHRepositoryCollectionViewCell"
 }
 
-struct Parameters {
-    let parmsRepFirstTime: [String: Any] = [
-        "q":"is:public",
-        "sort":"updated",
-        "order":"desc",
-        "page":"1",
-        "per_page":"100"
-        ]
-}
