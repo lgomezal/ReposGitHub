@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OBs-k3-XgA">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="10" y="54" width="394" height="808"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jfn-rK-zON">
-                        <size key="itemSize" width="50" height="50"/>
+                        <size key="itemSize" width="50" height="220"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -36,12 +36,12 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="OBs-k3-XgA" secondAttribute="trailing" id="COW-zf-3hI"/>
-                <constraint firstItem="OBs-k3-XgA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OAN-5Q-uAf"/>
+                <constraint firstAttribute="trailing" secondItem="OBs-k3-XgA" secondAttribute="trailing" constant="10" id="COW-zf-3hI"/>
+                <constraint firstItem="OBs-k3-XgA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="OAN-5Q-uAf"/>
                 <constraint firstAttribute="bottom" secondItem="OBs-k3-XgA" secondAttribute="bottom" constant="34" id="Wt5-3t-fIO"/>
-                <constraint firstItem="OBs-k3-XgA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bHt-oG-mBD"/>
+                <constraint firstItem="OBs-k3-XgA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="bHt-oG-mBD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

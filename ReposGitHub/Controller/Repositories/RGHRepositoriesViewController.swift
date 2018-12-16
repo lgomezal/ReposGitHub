@@ -25,6 +25,7 @@ class RGHRepositoriesViewController: UIViewController {
     
     @IBOutlet weak var repositoriesCollectionView: UICollectionView!
     
+    
     let repositoryCollectionViewCellId = Constants.repositoryCVCId
     
     var repositories: RGHRepositories?
@@ -33,7 +34,9 @@ class RGHRepositoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "Repositories"
+        
         //Initialize totalRepos
         totalRepos = RGHRepositories()
         
@@ -54,6 +57,13 @@ class RGHRepositoriesViewController: UIViewController {
             repositoriesDownload(queryText: queryText, nextPageParam: nextPage)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //Configure navigationBar opaque and custom color, status bar white
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.tintColor = .lightGray
+        self.navigationController?.navigationBar.barStyle = .default
     }
     
     func repositoriesDownload(queryText: String, nextPageParam: String) {

@@ -23,7 +23,11 @@ public struct RGHRepository: Codable {
     let language: String?
     let license: RGHLicense?
     let stargazersCount: Int?
+    let forksCount: Int?
+    let issuesCount: Int?
+    let size: Int?
     let updatedAt: Date?
+    let createdAt: Date?
     
     enum CodingKeys: String, CodingKey
     {
@@ -34,10 +38,14 @@ public struct RGHRepository: Codable {
         case language
         case license
         case stargazersCount = "stargazers_count"
+        case forksCount = "forks_count"
+        case issuesCount = "open_issues_count"
+        case size
         case updatedAt = "updated_at"
+        case createdAt = "created_at"
     }
     
-    init(name: String, fullName: String, description: String?, owner: RGHOwner, language: String?, license: RGHLicense?, stargazersCount: Int?, updatedAt: Date?) {
+    init(name: String, fullName: String, description: String?, owner: RGHOwner, language: String?, license: RGHLicense?, stargazersCount: Int?, forksCount: Int?, issuesCount: Int?, size: Int?, updatedAt: Date?, createdAt: Date?) {
         self.name = name
         self.fullName = fullName
         self.description = description
@@ -45,7 +53,11 @@ public struct RGHRepository: Codable {
         self.language = language
         self.license = license
         self.stargazersCount = stargazersCount
+        self.forksCount = forksCount
+        self.issuesCount = issuesCount
+        self.size = size
         self.updatedAt = updatedAt
+        self.createdAt = createdAt
     }
     
 }
@@ -62,7 +74,7 @@ struct RGHLicense: Codable {
 // Mark: - Proxy
 extension RGHRepository {
     var proxyForEquality: String {
-        return "\(name) \(fullName) \(description)"
+        return "\(name) \(fullName) \(String(describing: description))"
     }
     
     var proxyForComparison: String {

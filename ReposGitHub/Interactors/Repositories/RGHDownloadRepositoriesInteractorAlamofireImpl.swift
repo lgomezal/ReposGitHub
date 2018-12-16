@@ -23,7 +23,7 @@ class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInt
                 "per_page":"100"]
         } else {
             parameters = [
-                "q":"\(queryText) in:name is:public",
+                "q":"\(queryText) in:name,description is:public",
                 "sort":"start",
                 "order":"desc",
                 "page":"\(nextPageParam)",

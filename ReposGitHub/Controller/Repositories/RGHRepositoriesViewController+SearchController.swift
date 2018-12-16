@@ -10,13 +10,6 @@ import UIKit
 
 extension RGHRepositoriesViewController: UISearchBarDelegate {
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        //NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.searchReload(searchText:)), object: nil)
-        
-        //self.perform(#selector(self.searchReload(searchText:)), with: searchText, afterDelay: 0.5)
-    }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         //Download repositories
         if hasFind {
@@ -27,10 +20,6 @@ extension RGHRepositoriesViewController: UISearchBarDelegate {
                 repositoriesDownload(queryText: queryText, nextPageParam: nextPage)
             }
         }
-    }
-    
-    @objc func searchReload(searchText: String) {
-            print("reload search")
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

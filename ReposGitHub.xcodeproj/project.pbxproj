@@ -28,6 +28,9 @@
 		BA29DD1A21C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DD1821C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift */; };
 		BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */; };
 		BA9F5DE421C46D8100C85A0E /* RGHRepositoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */; };
+		BAB62FF121C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB62FEF21C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift */; };
+		BAB62FF221C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB62FF021C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib */; };
+		BAB62FF421C6D0DE00EA9BFE /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB62FF321C6D0DE00EA9BFE /* CustomColors.swift */; };
 		BACD17E221C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		BA29DD1921C43B4F006C8D73 /* RGHRepositoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHRepositoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA9F5DE021C4462000C85A0E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9F5DE221C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHRepositoriesViewController+CollectionViewController.swift"; sourceTree = "<group>"; };
+		BAB62FEF21C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHRepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		BAB62FF021C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHRepositoryDetailViewController.xib; sourceTree = "<group>"; };
+		BAB62FF321C6D0DE00EA9BFE /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHRepositoriesViewController+SearchController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				BA29DD0121C40F40006C8D73 /* Repositories */,
+				BAB62FED21C6CB4E00EA9BFE /* RepositoryDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				BA29DD0221C40F52006C8D73 /* Repositories */,
+				BAB62FEC21C6CB3300EA9BFE /* RepositoryDetail */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			children = (
 				BA29DCF921C3C489006C8D73 /* Typealias.swift */,
 				BA29DD0721C41441006C8D73 /* Constants.swift */,
+				BAB62FF321C6D0DE00EA9BFE /* CustomColors.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				BA29DD0A21C416F2006C8D73 /* RGHExecuteInteractor.swift */,
 				BA29DD0C21C41708006C8D73 /* RGHExecuteInteractorImpl.swift */,
 				BA29DD0E21C41859006C8D73 /* Repositories */,
+				BAB62FEE21C6CB6500EA9BFE /* RepositoryDetail */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -253,6 +263,29 @@
 				BA29DD1621C42CB5006C8D73 /* RGHJSONParserRepository.swift */,
 			);
 			path = JSONParser;
+			sourceTree = "<group>";
+		};
+		BAB62FEC21C6CB3300EA9BFE /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BAB62FEF21C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift */,
+			);
+			path = RepositoryDetail;
+			sourceTree = "<group>";
+		};
+		BAB62FED21C6CB4E00EA9BFE /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BAB62FF021C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib */,
+			);
+			path = RepositoryDetail;
+			sourceTree = "<group>";
+		};
+		BAB62FEE21C6CB6500EA9BFE /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA29DCDC21C38F96006C8D73 /* LaunchScreen.storyboard in Resources */,
+				BAB62FF221C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib in Resources */,
 				BA29DCD921C38F96006C8D73 /* Assets.xcassets in Resources */,
 				BA29DD0021C40DB4006C8D73 /* RGHRepositoriesViewController.xib in Resources */,
 				BA9F5DE421C46D8100C85A0E /* RGHRepositoryCollectionViewCell.xib in Resources */,
@@ -406,9 +440,11 @@
 				BA29DD0D21C41708006C8D73 /* RGHExecuteInteractorImpl.swift in Sources */,
 				BA29DCD221C38F95006C8D73 /* AppDelegate.swift in Sources */,
 				BA29DD1721C42CB5006C8D73 /* RGHJSONParserRepository.swift in Sources */,
+				BAB62FF121C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift in Sources */,
 				BA29DCFF21C40DB4006C8D73 /* RGHRepositoriesViewController.swift in Sources */,
 				BA29DCFC21C3D592006C8D73 /* RGHRepositories.swift in Sources */,
 				BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */,
+				BAB62FF421C6D0DE00EA9BFE /* CustomColors.swift in Sources */,
 				BA29DD0B21C416F2006C8D73 /* RGHExecuteInteractor.swift in Sources */,
 				BACD17E221C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift in Sources */,
 				BA29DD1021C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift in Sources */,

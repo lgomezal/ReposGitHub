@@ -26,18 +26,17 @@ extension RGHRepositoriesViewController: UICollectionViewDelegate, UICollectionV
         return cell
     }
     
-    /*func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let eventDetailViewController = EventDetailViewController()
-        let event: Event = ((self.events?.get(index: indexPath.row))!)
-        eventDetailViewController.event = event
-        eventDetailViewController.assists = true
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let repositoryDetailViewController = RGHRepositoryDetailViewController()
+        let repository: RGHRepository = ((self.totalRepos?.get(index: indexPath.row))!)
+        repositoryDetailViewController.repository = repository
         
-        navigationController?.pushViewController(eventDetailViewController, animated: true)
-    }*/
+        navigationController?.pushViewController(repositoryDetailViewController, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-            return CGSize(width: (UIScreen.main.bounds.width), height: (250 * (UIScreen.main.bounds.width)) / 384 )
+        return CGSize(width: (UIScreen.main.bounds.width - 20), height: (200 * (UIScreen.main.bounds.width - 20)) / 384 )
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
