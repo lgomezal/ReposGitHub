@@ -13,7 +13,6 @@ class RGHRepositoryDetailViewController: UIViewController {
     
     var repository: RGHRepository?
 
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -30,6 +29,9 @@ class RGHRepositoryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Title
+        self.title = self.repository?.name
+        
         //Ajust constraints of imagesview
         self.adjustConstraints()
         //Setup labels
@@ -42,14 +44,39 @@ class RGHRepositoryDetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.descriptionTextView.setContentOffset(CGPoint.zero, animated: false)
     }
-
+    
+    
+    @IBAction func readmePress(_ sender: UIButton) {
+        //Navigate to readmeviewcontroller
+        let readmeViewController = RGHReadmeViewController()
+        readmeViewController.repository = self.repository
+        navigationController?.pushViewController(readmeViewController, animated: true)
+    }
+    
+    
+    @IBAction func sourcePress(_ sender: UIButton) {
+        if self.repository?.sourceUrl != "" {
+            //Navigate to sourceviewcontroller
+            let sourceViewController = RGHSourceController()
+            sourceViewController.repository = self.repository
+            navigationController?.pushViewController(sourceViewController, animated: true)
+        }
+    }
+    
+    @IBAction func webSitePress(_ sender: UIButton) {
+        if self.repository?.homepage != "" {
+            //Navigate to websiteviewcontroller
+            let websiteViewController = RGHWebsiteViewController()
+            websiteViewController.repository = self.repository
+            navigationController?.pushViewController(websiteViewController, animated: true)
+        }
+    }
+    
     func adjustConstraints() {
         self.detailImage.heightAnchor.constraint(equalToConstant: (100 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
         self.detailImage.widthAnchor.constraint(equalToConstant: (100 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
         self.detailView.heightAnchor.constraint(equalToConstant: (250 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
         self.detailView.widthAnchor.constraint(equalToConstant: (250 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
-        //self.descriptionTextView.heightAnchor.constraint(equalToConstant: (75 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
-        //self.descriptionTextView.widthAnchor.constraint(equalToConstant: (75 * (UIScreen.main.bounds.width)) / 414 ).isActive = true
     }
     
     func putBorder() {
@@ -67,7 +94,7 @@ class RGHRepositoryDetailViewController: UIViewController {
         self.nameLabel.text = self.repository?.name
         self.descriptionTextView.text = self.repository?.description
         
-        /*self.starLabel.text = "\(self.repository?.stargazersCount ?? 0)"
+        self.starLabel.text = "\(self.repository?.stargazersCount ?? 0)"
         self.forksLabel.text = "\(self.repository?.forksCount ?? 0)"
         self.languageLabel.text = self.repository?.language
         self.issuesLabel.text = "\(self.repository?.issuesCount ?? 0)"
@@ -84,7 +111,7 @@ class RGHRepositoryDetailViewController: UIViewController {
             let day = ""
             self.lastUpdateLabel.text = "\(day)"
         }
-        self.loginLabel.text = self.repository?.owner?.login*/
+        self.loginLabel.text = self.repository?.owner?.login
     }
 
 

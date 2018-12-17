@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RGHWebsiteViewController" customModule="ReposGitHub" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="RaC-wu-1fO" id="YHG-BN-bAL"/>
+                <outlet property="webView" destination="v3K-LG-mQY" id="TCY-U4-kzJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RaC-wu-1fO">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r53-En-S0N">
+                    <rect key="frame" x="-20" y="24" width="454" height="858"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-LG-mQY">
+                            <rect key="frame" x="37" y="0.0" width="380" height="830"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="830" id="4NJ-W1-TAc"/>
+                            </constraints>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="v3K-LG-mQY" secondAttribute="bottom" id="2lL-TI-IZQ"/>
+                        <constraint firstItem="v3K-LG-mQY" firstAttribute="leading" secondItem="r53-En-S0N" secondAttribute="leading" constant="37" id="9lm-el-JGZ"/>
+                        <constraint firstAttribute="trailing" secondItem="v3K-LG-mQY" secondAttribute="trailing" id="Tro-Nh-vbc"/>
+                        <constraint firstItem="v3K-LG-mQY" firstAttribute="centerX" secondItem="r53-En-S0N" secondAttribute="centerX" id="Uba-mB-GwZ"/>
+                        <constraint firstItem="v3K-LG-mQY" firstAttribute="top" secondItem="r53-En-S0N" secondAttribute="top" id="aCD-NA-gIi"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r53-En-S0N" firstAttribute="centerX" secondItem="RaC-wu-1fO" secondAttribute="centerX" id="074-R2-tPb"/>
+                <constraint firstItem="r53-En-S0N" firstAttribute="leading" secondItem="RaC-wu-1fO" secondAttribute="leading" constant="-20" id="AMj-hw-f8p"/>
+                <constraint firstAttribute="bottom" secondItem="r53-En-S0N" secondAttribute="bottom" constant="14" id="UAQ-sg-FMb"/>
+                <constraint firstItem="r53-En-S0N" firstAttribute="top" secondItem="RaC-wu-1fO" secondAttribute="top" constant="24" id="oJ8-c1-har"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="zNy-ic-R8x"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+</document>

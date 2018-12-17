@@ -12,6 +12,8 @@ struct Constants {
     //url parameters
     static let urlHost = "https://api.github.com"
     static let urlLoginPath = "/search/repositories"
+    static let urlReadmePath = "/readme"
+    static let urlReposPath = "/repos"
     //CellsID
     static let repositoryCVCId = "RGHRepositoryCollectionViewCell"
 }

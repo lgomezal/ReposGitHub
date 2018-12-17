@@ -32,6 +32,15 @@
 		BAB62FF221C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB62FF021C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib */; };
 		BAB62FF421C6D0DE00EA9BFE /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB62FF321C6D0DE00EA9BFE /* CustomColors.swift */; };
 		BACD17E221C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */; };
+		BAE9691921C81B130097B7BB /* RGHReadmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9691721C81B130097B7BB /* RGHReadmeViewController.swift */; };
+		BAE9691A21C81B130097B7BB /* RGHReadmeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE9691821C81B130097B7BB /* RGHReadmeViewController.xib */; };
+		BAE9691D21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9691C21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift */; };
+		BAE9692021C81D900097B7BB /* RGHReadme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9691F21C81D900097B7BB /* RGHReadme.swift */; };
+		BAE9692221C81E4A0097B7BB /* RGHDownloadReadmeInteractorAlamofireImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9692121C81E4A0097B7BB /* RGHDownloadReadmeInteractorAlamofireImpl.swift */; };
+		BAE9692621C845C50097B7BB /* RGHWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9692421C845C50097B7BB /* RGHWebsiteViewController.swift */; };
+		BAE9692721C845C50097B7BB /* RGHWebsiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE9692521C845C50097B7BB /* RGHWebsiteViewController.xib */; };
+		BAE9692C21C84E080097B7BB /* RGHSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9692A21C84E080097B7BB /* RGHSourceController.swift */; };
+		BAE9692D21C84E080097B7BB /* RGHSourceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE9692B21C84E080097B7BB /* RGHSourceController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +86,15 @@
 		BAB62FF021C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHRepositoryDetailViewController.xib; sourceTree = "<group>"; };
 		BAB62FF321C6D0DE00EA9BFE /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		BACD17E121C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHRepositoriesViewController+SearchController.swift"; sourceTree = "<group>"; };
+		BAE9691721C81B130097B7BB /* RGHReadmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHReadmeViewController.swift; sourceTree = "<group>"; };
+		BAE9691821C81B130097B7BB /* RGHReadmeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHReadmeViewController.xib; sourceTree = "<group>"; };
+		BAE9691C21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadReadmeInteractor.swift; sourceTree = "<group>"; };
+		BAE9691F21C81D900097B7BB /* RGHReadme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHReadme.swift; sourceTree = "<group>"; };
+		BAE9692121C81E4A0097B7BB /* RGHDownloadReadmeInteractorAlamofireImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadReadmeInteractorAlamofireImpl.swift; sourceTree = "<group>"; };
+		BAE9692421C845C50097B7BB /* RGHWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHWebsiteViewController.swift; sourceTree = "<group>"; };
+		BAE9692521C845C50097B7BB /* RGHWebsiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHWebsiteViewController.xib; sourceTree = "<group>"; };
+		BAE9692A21C84E080097B7BB /* RGHSourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHSourceController.swift; sourceTree = "<group>"; };
+		BAE9692B21C84E080097B7BB /* RGHSourceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHSourceController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				BA29DD0621C410C3006C8D73 /* Repositories */,
+				BAE9691E21C81D710097B7BB /* Readme */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +195,9 @@
 			children = (
 				BA29DD0121C40F40006C8D73 /* Repositories */,
 				BAB62FED21C6CB4E00EA9BFE /* RepositoryDetail */,
+				BAE9692E21C84E110097B7BB /* Source */,
+				BAE9691B21C81B200097B7BB /* Readme */,
+				BAE9692821C845D20097B7BB /* Website */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +207,9 @@
 			children = (
 				BA29DD0221C40F52006C8D73 /* Repositories */,
 				BAB62FEC21C6CB3300EA9BFE /* RepositoryDetail */,
+				BAE9692921C84DDA0097B7BB /* Source */,
+				BAE9691621C81AD00097B7BB /* Readme */,
+				BAE9692321C845980097B7BB /* Website */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,7 +268,7 @@
 				BA29DD0A21C416F2006C8D73 /* RGHExecuteInteractor.swift */,
 				BA29DD0C21C41708006C8D73 /* RGHExecuteInteractorImpl.swift */,
 				BA29DD0E21C41859006C8D73 /* Repositories */,
-				BAB62FEE21C6CB6500EA9BFE /* RepositoryDetail */,
+				BAB62FEE21C6CB6500EA9BFE /* Readme */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -281,11 +306,69 @@
 			path = RepositoryDetail;
 			sourceTree = "<group>";
 		};
-		BAB62FEE21C6CB6500EA9BFE /* RepositoryDetail */ = {
+		BAB62FEE21C6CB6500EA9BFE /* Readme */ = {
 			isa = PBXGroup;
 			children = (
+				BAE9691C21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift */,
+				BAE9692121C81E4A0097B7BB /* RGHDownloadReadmeInteractorAlamofireImpl.swift */,
 			);
-			path = RepositoryDetail;
+			path = Readme;
+			sourceTree = "<group>";
+		};
+		BAE9691621C81AD00097B7BB /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9691721C81B130097B7BB /* RGHReadmeViewController.swift */,
+			);
+			path = Readme;
+			sourceTree = "<group>";
+		};
+		BAE9691B21C81B200097B7BB /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9691821C81B130097B7BB /* RGHReadmeViewController.xib */,
+			);
+			path = Readme;
+			sourceTree = "<group>";
+		};
+		BAE9691E21C81D710097B7BB /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9691F21C81D900097B7BB /* RGHReadme.swift */,
+			);
+			path = Readme;
+			sourceTree = "<group>";
+		};
+		BAE9692321C845980097B7BB /* Website */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9692421C845C50097B7BB /* RGHWebsiteViewController.swift */,
+			);
+			path = Website;
+			sourceTree = "<group>";
+		};
+		BAE9692821C845D20097B7BB /* Website */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9692521C845C50097B7BB /* RGHWebsiteViewController.xib */,
+			);
+			path = Website;
+			sourceTree = "<group>";
+		};
+		BAE9692921C84DDA0097B7BB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9692A21C84E080097B7BB /* RGHSourceController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BAE9692E21C84E110097B7BB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9692B21C84E080097B7BB /* RGHSourceController.xib */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,9 +454,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE9692721C845C50097B7BB /* RGHWebsiteViewController.xib in Resources */,
 				BA29DCDC21C38F96006C8D73 /* LaunchScreen.storyboard in Resources */,
+				BAE9692D21C84E080097B7BB /* RGHSourceController.xib in Resources */,
 				BAB62FF221C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib in Resources */,
 				BA29DCD921C38F96006C8D73 /* Assets.xcassets in Resources */,
+				BAE9691A21C81B130097B7BB /* RGHReadmeViewController.xib in Resources */,
 				BA29DD0021C40DB4006C8D73 /* RGHRepositoriesViewController.xib in Resources */,
 				BA9F5DE421C46D8100C85A0E /* RGHRepositoryCollectionViewCell.xib in Resources */,
 				BA29DCF221C3900A006C8D73 /* Podfile in Resources */,
@@ -435,14 +521,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE9691921C81B130097B7BB /* RGHReadmeViewController.swift in Sources */,
 				BA29DD0521C40FCB006C8D73 /* UIviewController+Additions.swift in Sources */,
 				BA29DD1221C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift in Sources */,
 				BA29DD0D21C41708006C8D73 /* RGHExecuteInteractorImpl.swift in Sources */,
 				BA29DCD221C38F95006C8D73 /* AppDelegate.swift in Sources */,
 				BA29DD1721C42CB5006C8D73 /* RGHJSONParserRepository.swift in Sources */,
+				BAE9692C21C84E080097B7BB /* RGHSourceController.swift in Sources */,
 				BAB62FF121C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift in Sources */,
 				BA29DCFF21C40DB4006C8D73 /* RGHRepositoriesViewController.swift in Sources */,
+				BAE9692621C845C50097B7BB /* RGHWebsiteViewController.swift in Sources */,
 				BA29DCFC21C3D592006C8D73 /* RGHRepositories.swift in Sources */,
+				BAE9692021C81D900097B7BB /* RGHReadme.swift in Sources */,
 				BA9F5DE321C44A7100C85A0E /* RGHRepositoriesViewController+CollectionViewController.swift in Sources */,
 				BAB62FF421C6D0DE00EA9BFE /* CustomColors.swift in Sources */,
 				BA29DD0B21C416F2006C8D73 /* RGHExecuteInteractor.swift in Sources */,
@@ -451,6 +541,8 @@
 				BA29DD0821C41441006C8D73 /* Constants.swift in Sources */,
 				BA29DCFA21C3C489006C8D73 /* Typealias.swift in Sources */,
 				BA29DD1A21C43B4F006C8D73 /* RGHrepositoryCollectionViewCell.swift in Sources */,
+				BAE9691D21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift in Sources */,
+				BAE9692221C81E4A0097B7BB /* RGHDownloadReadmeInteractorAlamofireImpl.swift in Sources */,
 				BA29DCF821C3C440006C8D73 /* RGHRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
