@@ -63,6 +63,7 @@ public struct RGHRepository: Codable {
 }
 
 struct RGHOwner: Codable {
+    let login: String
     let avatar_url: String
 }
 

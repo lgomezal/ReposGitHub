@@ -48,16 +48,6 @@ class RGHRepositoryCollectionViewCell: UICollectionViewCell {
         }
         self.languageLabel.text = repository.language
         self.descriptionLabel.text = repository.description
-        
-        /*let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd,yyyy"
-        if let date = repository.updatedAt {
-            let day = formatter.string(from: date)
-            self.updateLabel.text = "\(day)"
-        } else {
-            let day = ""
-            self.updateLabel.text = "\(day)"
-        }*/
 
     }
     
