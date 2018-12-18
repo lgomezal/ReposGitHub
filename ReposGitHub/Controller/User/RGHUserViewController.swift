@@ -88,4 +88,8 @@ class RGHUserViewController: UIViewController {
         userAvatarImage.layer.borderWidth = 3
         userAvatarImage.layer.borderColor = UIColor.white.cgColor
     }
+    
+    override func viewDidLayoutSubviews() {
+        activityIndicator.center = self.view.center
+    }
 }

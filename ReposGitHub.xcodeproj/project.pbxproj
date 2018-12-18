@@ -58,6 +58,16 @@
 		BACDE01721C94605002DE468 /* RGHDownloadWatchersInteractorAlamofireImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE01621C94605002DE468 /* RGHDownloadWatchersInteractorAlamofireImpl.swift */; };
 		BACDE01A21C946BE002DE468 /* RGHJSONParserWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE01921C946BE002DE468 /* RGHJSONParserWatcher.swift */; };
 		BACDE01C21C94828002DE468 /* RGHWatchersViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE01B21C94828002DE468 /* RGHWatchersViewController+TableViewController.swift */; };
+		BACDE01E21C94BCA002DE468 /* RGHForksUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE01D21C94BCA002DE468 /* RGHForksUsers.swift */; };
+		BACDE02121C94C5E002DE468 /* RGHJSONParserFork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE02021C94C5E002DE468 /* RGHJSONParserFork.swift */; };
+		BACDE02621C94D23002DE468 /* RGHForksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE02421C94D23002DE468 /* RGHForksViewController.swift */; };
+		BACDE02721C94D23002DE468 /* RGHForksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACDE02521C94D23002DE468 /* RGHForksViewController.xib */; };
+		BACDE02A21C94F39002DE468 /* RGHDownloadForksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE02921C94F39002DE468 /* RGHDownloadForksInteractor.swift */; };
+		BACDE02C21C94F75002DE468 /* RGHDownloadForksInteractorAlamofireImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE02B21C94F75002DE468 /* RGHDownloadForksInteractorAlamofireImpl.swift */; };
+		BACDE02F21C950BF002DE468 /* RGHForkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE02D21C950BF002DE468 /* RGHForkCell.swift */; };
+		BACDE03021C950BF002DE468 /* RGHForkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACDE02E21C950BF002DE468 /* RGHForkCell.xib */; };
+		BACDE03221C95206002DE468 /* RGHForksViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE03121C95206002DE468 /* RGHForksViewController+TableViewController.swift */; };
+		BACDE03421C95DA4002DE468 /* ExtractLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACDE03321C95DA4002DE468 /* ExtractLink.swift */; };
 		BAE9691921C81B130097B7BB /* RGHReadmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9691721C81B130097B7BB /* RGHReadmeViewController.swift */; };
 		BAE9691A21C81B130097B7BB /* RGHReadmeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE9691821C81B130097B7BB /* RGHReadmeViewController.xib */; };
 		BAE9691D21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9691C21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift */; };
@@ -138,6 +148,16 @@
 		BACDE01621C94605002DE468 /* RGHDownloadWatchersInteractorAlamofireImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadWatchersInteractorAlamofireImpl.swift; sourceTree = "<group>"; };
 		BACDE01921C946BE002DE468 /* RGHJSONParserWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHJSONParserWatcher.swift; sourceTree = "<group>"; };
 		BACDE01B21C94828002DE468 /* RGHWatchersViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHWatchersViewController+TableViewController.swift"; sourceTree = "<group>"; };
+		BACDE01D21C94BCA002DE468 /* RGHForksUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHForksUsers.swift; sourceTree = "<group>"; };
+		BACDE02021C94C5E002DE468 /* RGHJSONParserFork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHJSONParserFork.swift; sourceTree = "<group>"; };
+		BACDE02421C94D23002DE468 /* RGHForksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHForksViewController.swift; sourceTree = "<group>"; };
+		BACDE02521C94D23002DE468 /* RGHForksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHForksViewController.xib; sourceTree = "<group>"; };
+		BACDE02921C94F39002DE468 /* RGHDownloadForksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadForksInteractor.swift; sourceTree = "<group>"; };
+		BACDE02B21C94F75002DE468 /* RGHDownloadForksInteractorAlamofireImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadForksInteractorAlamofireImpl.swift; sourceTree = "<group>"; };
+		BACDE02D21C950BF002DE468 /* RGHForkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHForkCell.swift; sourceTree = "<group>"; };
+		BACDE02E21C950BF002DE468 /* RGHForkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHForkCell.xib; sourceTree = "<group>"; };
+		BACDE03121C95206002DE468 /* RGHForksViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGHForksViewController+TableViewController.swift"; sourceTree = "<group>"; };
+		BACDE03321C95DA4002DE468 /* ExtractLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractLink.swift; sourceTree = "<group>"; };
 		BAE9691721C81B130097B7BB /* RGHReadmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHReadmeViewController.swift; sourceTree = "<group>"; };
 		BAE9691821C81B130097B7BB /* RGHReadmeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGHReadmeViewController.xib; sourceTree = "<group>"; };
 		BAE9691C21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGHDownloadReadmeInteractor.swift; sourceTree = "<group>"; };
@@ -254,6 +274,7 @@
 				BAB62FED21C6CB4E00EA9BFE /* RepositoryDetail */,
 				BA9A93CB21C90DC4009A777E /* Stargazers */,
 				BA9A93E221C9420B009A777E /* Watchers */,
+				BACDE02221C94CBE002DE468 /* Forks */,
 				BA9A93B421C8ED94009A777E /* User */,
 				BAE9691B21C81B200097B7BB /* Readme */,
 				BAE9692E21C84E110097B7BB /* Source */,
@@ -269,6 +290,7 @@
 				BAB62FEC21C6CB3300EA9BFE /* RepositoryDetail */,
 				BA9A93C621C90D79009A777E /* Stargazers */,
 				BA9A93E321C94228009A777E /* Watchers */,
+				BACDE02321C94CDC002DE468 /* Forks */,
 				BA9A93AF21C8ED1D009A777E /* User */,
 				BAE9691621C81AD00097B7BB /* Readme */,
 				BAE9692921C84DDA0097B7BB /* Source */,
@@ -283,6 +305,7 @@
 				BA29DCF921C3C489006C8D73 /* Typealias.swift */,
 				BA29DD0721C41441006C8D73 /* Constants.swift */,
 				BAB62FF321C6D0DE00EA9BFE /* CustomColors.swift */,
+				BACDE03321C95DA4002DE468 /* ExtractLink.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -332,6 +355,7 @@
 				BA29DD0E21C41859006C8D73 /* Repositories */,
 				BA9A93CE21C91188009A777E /* Stargazers */,
 				BACDE01321C94591002DE468 /* Watchers */,
+				BACDE02821C94EFB002DE468 /* Forks */,
 				BA9A93B821C8F3CF009A777E /* User */,
 				BAB62FEE21C6CB6500EA9BFE /* Readme */,
 			);
@@ -353,6 +377,7 @@
 				BA9A93D321C913E7009A777E /* Repositories */,
 				BA9A93D421C913FE009A777E /* Stargazers */,
 				BACDE01821C946A3002DE468 /* Watchers */,
+				BACDE01F21C94C3D002DE468 /* Forks */,
 			);
 			path = JSONParser;
 			sourceTree = "<group>";
@@ -412,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				BA9A93C421C90C7D009A777E /* RGHForks.swift */,
+				BACDE01D21C94BCA002DE468 /* RGHForksUsers.swift */,
 			);
 			path = Forks;
 			sourceTree = "<group>";
@@ -519,6 +545,42 @@
 				BACDE01921C946BE002DE468 /* RGHJSONParserWatcher.swift */,
 			);
 			path = Watchers;
+			sourceTree = "<group>";
+		};
+		BACDE01F21C94C3D002DE468 /* Forks */ = {
+			isa = PBXGroup;
+			children = (
+				BACDE02021C94C5E002DE468 /* RGHJSONParserFork.swift */,
+			);
+			path = Forks;
+			sourceTree = "<group>";
+		};
+		BACDE02221C94CBE002DE468 /* Forks */ = {
+			isa = PBXGroup;
+			children = (
+				BACDE02521C94D23002DE468 /* RGHForksViewController.xib */,
+				BACDE02E21C950BF002DE468 /* RGHForkCell.xib */,
+			);
+			path = Forks;
+			sourceTree = "<group>";
+		};
+		BACDE02321C94CDC002DE468 /* Forks */ = {
+			isa = PBXGroup;
+			children = (
+				BACDE02421C94D23002DE468 /* RGHForksViewController.swift */,
+				BACDE03121C95206002DE468 /* RGHForksViewController+TableViewController.swift */,
+				BACDE02D21C950BF002DE468 /* RGHForkCell.swift */,
+			);
+			path = Forks;
+			sourceTree = "<group>";
+		};
+		BACDE02821C94EFB002DE468 /* Forks */ = {
+			isa = PBXGroup;
+			children = (
+				BACDE02921C94F39002DE468 /* RGHDownloadForksInteractor.swift */,
+				BACDE02B21C94F75002DE468 /* RGHDownloadForksInteractorAlamofireImpl.swift */,
+			);
+			path = Forks;
 			sourceTree = "<group>";
 		};
 		BAE9691621C81AD00097B7BB /* Readme */ = {
@@ -661,7 +723,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9A93CA21C90DBB009A777E /* RGHStargazersViewController.xib in Resources */,
+				BACDE02721C94D23002DE468 /* RGHForksViewController.xib in Resources */,
 				BAE9692721C845C50097B7BB /* RGHWebsiteViewController.xib in Resources */,
+				BACDE03021C950BF002DE468 /* RGHForkCell.xib in Resources */,
 				BA29DCDC21C38F96006C8D73 /* LaunchScreen.storyboard in Resources */,
 				BAE9692D21C84E080097B7BB /* RGHSourceController.xib in Resources */,
 				BAB62FF221C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.xib in Resources */,
@@ -735,16 +799,22 @@
 				BA9A93D821C920A8009A777E /* RGHStargazersViewController+TableViewController.swift in Sources */,
 				BAE9691921C81B130097B7BB /* RGHReadmeViewController.swift in Sources */,
 				BA29DD0521C40FCB006C8D73 /* UIviewController+Additions.swift in Sources */,
+				BACDE02F21C950BF002DE468 /* RGHForkCell.swift in Sources */,
 				BA29DD1221C418F6006C8D73 /* RGHDownloadRepositoriesInteractorAlamofireImpl.swift in Sources */,
+				BACDE02121C94C5E002DE468 /* RGHJSONParserFork.swift in Sources */,
 				BA29DD0D21C41708006C8D73 /* RGHExecuteInteractorImpl.swift in Sources */,
 				BACDE01521C945C9002DE468 /* RGHDownloadWatchersInteractor.swift in Sources */,
 				BA9A93D621C91433009A777E /* RGHJSONParserStargazer.swift in Sources */,
+				BACDE02A21C94F39002DE468 /* RGHDownloadForksInteractor.swift in Sources */,
 				BA29DCD221C38F95006C8D73 /* AppDelegate.swift in Sources */,
 				BA9A93C121C90C5F009A777E /* RGHStargazer.swift in Sources */,
 				BA29DD1721C42CB5006C8D73 /* RGHJSONParserRepository.swift in Sources */,
+				BACDE03421C95DA4002DE468 /* ExtractLink.swift in Sources */,
 				BAE9692C21C84E080097B7BB /* RGHSourceController.swift in Sources */,
+				BACDE02C21C94F75002DE468 /* RGHDownloadForksInteractorAlamofireImpl.swift in Sources */,
 				BAB62FF121C6CBDD00EA9BFE /* RGHRepositoryDetailViewController.swift in Sources */,
 				BA29DCFF21C40DB4006C8D73 /* RGHRepositoriesViewController.swift in Sources */,
+				BACDE02621C94D23002DE468 /* RGHForksViewController.swift in Sources */,
 				BAE9692621C845C50097B7BB /* RGHWebsiteViewController.swift in Sources */,
 				BA9A93E621C94263009A777E /* RGHWatchersViewController.swift in Sources */,
 				BA9A93D221C9132A009A777E /* RGHDownloadGazersInteractorAlamofireImpl.swift in Sources */,
@@ -758,6 +828,7 @@
 				BA9A93E121C94158009A777E /* RGHWatchersUsers.swift in Sources */,
 				BACD17E221C56C6000F3F62F /* RGHRepositoriesViewController+SearchController.swift in Sources */,
 				BA29DD1021C4189E006C8D73 /* RGHDownloadRepositoriesInteractor.swift in Sources */,
+				BACDE01E21C94BCA002DE468 /* RGHForksUsers.swift in Sources */,
 				BA9A93D021C911B5009A777E /* RGHDownloadGazersInteractor.swift in Sources */,
 				BA9A93B721C8EDFF009A777E /* RGHUser.swift in Sources */,
 				BA9A93DD21C9229B009A777E /* RGHStargazerCell.swift in Sources */,
@@ -770,6 +841,7 @@
 				BA9A93C921C90DBB009A777E /* RGHStargazersViewController.swift in Sources */,
 				BA9A93BA21C8F3FB009A777E /* RGHDownloadUserInteractor.swift in Sources */,
 				BA9A93C321C90C6F009A777E /* RGHWatchers.swift in Sources */,
+				BACDE03221C95206002DE468 /* RGHForksViewController+TableViewController.swift in Sources */,
 				BAE9691D21C81CEE0097B7BB /* RGHDownloadReadmeInteractor.swift in Sources */,
 				BA9A93BC21C8F445009A777E /* RGHDownloadUserInteractorAlamofireImpl.swift in Sources */,
 				BA9A93B221C8ED84009A777E /* RGHUserViewController.swift in Sources */,

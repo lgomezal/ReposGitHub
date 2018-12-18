@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct RGHForks: Codable {
-    let owner: RGHOwner?
+public struct RGHForks: Codable {
+    let items: [RGHFork]
+}
+
+public struct RGHFork: Codable {
+    let owner: RGHOwner
 }

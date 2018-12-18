@@ -15,6 +15,8 @@ var nextUrlStargazers: String = ""
 var hasMorePagesStargazers: Bool = false
 var nextUrlWatchers: String = ""
 var hasMorePagesWatchers: Bool = false
+var nextUrlForks: String = ""
+var hasMorePagesForks: Bool = false
 
 class RGHRepositoriesViewController: UIViewController {
     
@@ -73,11 +75,10 @@ class RGHRepositoriesViewController: UIViewController {
     func repositoriesDownload(queryText: String, nextPageParam: String) {
         
         //Configure activity indicator
-        activityIndicator.frame = view.bounds
+        activityIndicator.frame = self.view.frame
         activityIndicator.style = .gray
-        activityIndicator.center = self.view.center
+        self.view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
-        view.addSubview(activityIndicator)
         
         let downloadRepositoriesInteractor: RGHDownloadRepositoriesInteractor = RGHDownloadRepositoriesInteractorAlamofireImpl()
         
@@ -100,5 +101,9 @@ class RGHRepositoriesViewController: UIViewController {
                 self.repositoriesCollectionView.reloadData()
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        activityIndicator.center = self.view.center
     }
 }

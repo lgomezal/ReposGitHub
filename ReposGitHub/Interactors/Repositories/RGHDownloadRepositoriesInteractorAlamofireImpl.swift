@@ -36,7 +36,7 @@ class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInt
             case .success(let data):
                 //Extract Links from response for paging
                 if let linkHeader = response.response?.allHeaderFields["Link"] as? String {
-                    nextPage = self.extractLink(linkHeader: linkHeader)
+                    nextPage = extractLinkAmpersand(linkHeader: linkHeader)
                 }
                 activityIndicator.removeFromSuperview()
                 do {
@@ -51,25 +51,5 @@ class RGHDownloadRepositoriesInteractorAlamofireImpl: RGHDownloadRepositoriesInt
     
     func execute(queryText: String, nextPageParam: String, onSuccess: @escaping (RGHRepositories?) -> Void) {
         execute(queryText: queryText, nextPageParam: nextPageParam, onSuccess: onSuccess, onError: nil)
-    }
-    
-    func extractLink(linkHeader: String) -> String {
-        let links = linkHeader.components(separatedBy: ",")
-        
-        var dictionary: [String: String] = [:]
-        links.forEach({
-            let components = $0.components(separatedBy:"; ")
-            let cleanPath = components[0].trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
-            dictionary[components[1]] = cleanPath
-        })
-        
-        if let nextPagePath = dictionary["rel=\"next\""] {
-            print("nextPagePath: \(nextPagePath)")
-            let ampersand = nextPagePath.components(separatedBy: "&")
-            let nextPage = ampersand[1].trimmingCharacters(in: CharacterSet(charactersIn: "page="))
-            return nextPage
-        } else {
-            return ""
-        }
     }
 }

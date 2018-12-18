@@ -21,8 +21,10 @@ class RGHWebsiteViewController: UIViewController {
         self.title = "Homepage"
         
         //If homepage show this
-        if let url: URL = URL(string: ((self.repository?.homepage)!)) {
-            self.webView.load(URLRequest(url: url))
+        if self.repository?.homepage != nil {
+            if let url: URL = URL(string: ((self.repository?.homepage)!)) {
+                self.webView.load(URLRequest(url: url))
+            }
         }
     }
 }

@@ -133,6 +133,9 @@
                                                     <state key="normal" title="Forks">
                                                         <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="forksPress:" destination="-1" eventType="touchUpInside" id="nE4-dZ-uOX"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="forks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-oz-1rP">
                                                     <rect key="frame" x="50" y="33.5" width="38.5" height="20.5"/>

@@ -59,6 +59,14 @@ class RGHRepositoryDetailViewController: UIViewController {
         navigationController?.pushViewController(watchersViewController, animated: true)
     }
     
+    @IBAction func forksPress(_ sender: UIButton) {
+        if self.forksLabel.text != "0" {
+            let forksViewController = RGHForksViewController()
+            forksViewController.repository = self.repository
+            navigationController?.pushViewController(forksViewController, animated: true)
+        }
+    }
+    
     @IBAction func userPress(_ sender: UIButton) {
         //Navigate to userviewcontroller
         let userViewController = RGHUserViewController()
@@ -75,7 +83,7 @@ class RGHRepositoryDetailViewController: UIViewController {
     
     
     @IBAction func sourcePress(_ sender: UIButton) {
-        if self.repository?.sourceUrl != "" {
+        if self.repository?.sourceUrl != nil {
             //Navigate to sourceviewcontroller
             let sourceViewController = RGHSourceController()
             sourceViewController.repository = self.repository
@@ -84,7 +92,7 @@ class RGHRepositoryDetailViewController: UIViewController {
     }
     
     @IBAction func webSitePress(_ sender: UIButton) {
-        if self.repository?.homepage != "" {
+        if self.repository?.homepage != nil {
             //Navigate to websiteviewcontroller
             let websiteViewController = RGHWebsiteViewController()
             websiteViewController.repository = self.repository
@@ -134,5 +142,7 @@ class RGHRepositoryDetailViewController: UIViewController {
         self.loginLabel.text = self.repository?.owner?.login
     }
 
-
+    override func viewDidLayoutSubviews() {
+        activityIndicator.center = self.view.center
+    }
 }

@@ -77,4 +77,8 @@ class RGHStargazersViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        activityIndicator.center = self.view.center
+    }
 }
