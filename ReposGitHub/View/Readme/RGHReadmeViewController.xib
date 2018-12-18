@@ -24,7 +24,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiN-q7-zpQ">
                     <rect key="frame" x="-20" y="24" width="454" height="858"/>
                     <subviews>
-                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IC7-zG-SMp">
+                        <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IC7-zG-SMp">
                             <rect key="frame" x="37" y="0.0" width="380" height="830"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>

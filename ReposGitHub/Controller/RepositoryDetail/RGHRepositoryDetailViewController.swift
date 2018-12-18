@@ -45,6 +45,26 @@ class RGHRepositoryDetailViewController: UIViewController {
         self.descriptionTextView.setContentOffset(CGPoint.zero, animated: false)
     }
     
+    @IBAction func stargazersPress(_ sender: UIButton) {
+        if self.starLabel.text != "0" {
+            let stargazersViewController = RGHStargazersViewController()
+            stargazersViewController.repository = self.repository
+            navigationController?.pushViewController(stargazersViewController, animated: true)
+        }
+    }
+    
+    @IBAction func watchersPress(_ sender: UIButton) {
+        let watchersViewController = RGHWatchersViewController()
+        watchersViewController.repository = self.repository
+        navigationController?.pushViewController(watchersViewController, animated: true)
+    }
+    
+    @IBAction func userPress(_ sender: UIButton) {
+        //Navigate to userviewcontroller
+        let userViewController = RGHUserViewController()
+        userViewController.repository = self.repository
+        navigationController?.pushViewController(userViewController, animated: true)
+    }
     
     @IBAction func readmePress(_ sender: UIButton) {
         //Navigate to readmeviewcontroller

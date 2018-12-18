@@ -11,6 +11,10 @@ import UIKit
 let activityIndicator = UIActivityIndicatorView(style: .gray)
 var nextPage: String = "1"
 var queryText: String = ""
+var nextUrlStargazers: String = ""
+var hasMorePagesStargazers: Bool = false
+var nextUrlWatchers: String = ""
+var hasMorePagesWatchers: Bool = false
 
 class RGHRepositoriesViewController: UIViewController {
     

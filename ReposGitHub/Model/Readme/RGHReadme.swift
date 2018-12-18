@@ -12,11 +12,13 @@ struct RGHReadme: Codable {
     let name: String
     let path: String
     let htmlUrl: String
+    let content: String
     
     enum CodingKeys: String, CodingKey
     {
         case name
         case path
         case htmlUrl = "html_url"
+        case content
     }
 }

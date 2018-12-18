@@ -29,8 +29,8 @@ public struct RGHRepository: Codable {
     let updatedAt: Date?
     let createdAt: Date?
     let forksUrl: String?
-    let stargazersUrl: String?
-    let subscribersUrl: String?
+    let stargazerUrl: String?
+    let subscriberUrl: String?
     let sourceUrl: String?
     let homepage: String?
     
@@ -49,13 +49,13 @@ public struct RGHRepository: Codable {
         case updatedAt = "updated_at"
         case createdAt = "created_at"
         case forksUrl = "forks_url"
-        case stargazersUrl = "stargazers_url"
-        case subscribersUrl = "subscribers_url"
+        case stargazerUrl = "stargazers_url"
+        case subscriberUrl = "subscribers_url"
         case sourceUrl = "html_url"
         case homepage
     }
     
-    init(name: String, fullName: String, description: String?, owner: RGHOwner, language: String?, license: RGHLicense?, stargazersCount: Int?, forksCount: Int?, issuesCount: Int?, size: Int?, updatedAt: Date?, createdAt: Date?, forksUrl: String?, stargazersUrl: String?, subscribersUrl: String?, sourceUrl: String?, homepage: String?) {
+    init(name: String, fullName: String, description: String?, owner: RGHOwner, language: String?, license: RGHLicense?, stargazersCount: Int?, forksCount: Int?, issuesCount: Int?, size: Int?, updatedAt: Date?, createdAt: Date?, forksUrl: String?, stargazerUrl: String?, subscriberUrl: String?, sourceUrl: String?, homepage: String?) {
         self.name = name
         self.fullName = fullName
         self.description = description
@@ -69,8 +69,8 @@ public struct RGHRepository: Codable {
         self.updatedAt = updatedAt
         self.createdAt = createdAt
         self.forksUrl = forksUrl
-        self.stargazersUrl = stargazersUrl
-        self.subscribersUrl = subscribersUrl
+        self.stargazerUrl = stargazerUrl
+        self.subscriberUrl = subscriberUrl
         self.sourceUrl = sourceUrl
         self.homepage = homepage
     }

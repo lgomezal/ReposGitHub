@@ -16,5 +16,7 @@ struct Constants {
     static let urlReposPath = "/repos"
     //CellsID
     static let repositoryCVCId = "RGHRepositoryCollectionViewCell"
+    static let stargazerCVCId = "RGHStargazerCell"
+    static let watcherCVCId = "RGHWatcherCell"
 }
 

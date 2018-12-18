@@ -24,7 +24,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r53-En-S0N">
                     <rect key="frame" x="-20" y="24" width="454" height="858"/>
                     <subviews>
-                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-LG-mQY">
+                        <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-LG-mQY">
                             <rect key="frame" x="37" y="0.0" width="380" height="830"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="830" id="4NJ-W1-TAc"/>
