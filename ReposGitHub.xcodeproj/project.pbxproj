@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4B6B0DBC7B2459EEC947C9C4 /* Pods_ReposGitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EEAA8977FE292D36963045 /* Pods_ReposGitHub.framework */; };
+		BA1EA74A23796F6A00EC818F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1EA74923796F6A00EC818F /* WebKit.framework */; };
 		BA29DCD221C38F95006C8D73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29DCD121C38F95006C8D73 /* AppDelegate.swift */; };
 		BA29DCD921C38F96006C8D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA29DCD821C38F96006C8D73 /* Assets.xcassets */; };
 		BA29DCDC21C38F96006C8D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29DCDA21C38F96006C8D73 /* LaunchScreen.storyboard */; };
@@ -93,6 +94,7 @@
 		19ED5DAC23EA59A50FEA3AF3 /* Pods-ReposGitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReposGitHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub.release.xcconfig"; sourceTree = "<group>"; };
 		79F7300723A9AC44815A47FE /* Pods-ReposGitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReposGitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		88EEAA8977FE292D36963045 /* Pods_ReposGitHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReposGitHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA1EA74923796F6A00EC818F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BA29DCCE21C38F95006C8D73 /* ReposGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReposGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29DCD121C38F95006C8D73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA29DCD821C38F96006C8D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1EA74A23796F6A00EC818F /* WebKit.framework in Frameworks */,
 				4B6B0DBC7B2459EEC947C9C4 /* Pods_ReposGitHub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +194,7 @@
 		311C75F8FC0F9D777E8E56CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA1EA74923796F6A00EC818F /* WebKit.framework */,
 				BA9F5DE021C4462000C85A0E /* Alamofire.framework */,
 				88EEAA8977FE292D36963045 /* Pods_ReposGitHub.framework */,
 			);
@@ -774,19 +778,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReposGitHub/Pods-ReposGitHub-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
